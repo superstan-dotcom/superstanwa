@@ -1,121 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Super Stan (WA) Pty Ltd</title>
+  <title>Super Stan (WA) Pty Ltd</title>
 
-<style>
-* {
-    box-sizing: border-box;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f4f7fb;
-    color: #152238;
-}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f7fb;
+      color: #152238;
+    }
 
-header {
-    background: #062b57;
-    color: white;
-    padding: 24px 16px;
-    text-align: center;
-}
+    header {
+      background: #062b57;
+      color: white;
+      padding: 24px 15px;
+      text-align: center;
+    }
 
-header h1 {
-    margin: 0;
-    font-size: 26px;
-}
+    header h1 {
+      margin: 0 0 8px;
+      color: #ffc400;
+      font-size: 28px;
+    }
 
-header p {
-    margin: 8px 0 0;
-    font-size: 16px;
-}
+    header p {
+      margin: 0;
+      font-size: 16px;
+    }
 
-.container {
-    max-width: 680px;
-    margin: 20px auto;
-    padding: 20px;
-}
+    .card {
+      max-width: 680px;
+      margin: 25px auto;
+      padding: 22px;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
 
-.card {
-    background: white;
-    border-radius: 16px;
-    padding: 24px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-}
+    label {
+      display: block;
+      font-weight: bold;
+      margin: 14px 0 7px;
+    }
 
-h2 {
-    margin-top: 0;
-    text-align: center;
-    color: #062b57;
-}
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid #cfd7e3;
+      border-radius: 9px;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+    }
 
-label {
-    display: block;
-    font-weight: bold;
-    margin: 14px 0 6px;
-}
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
 
-input,
-textarea,
-select {
-    width: 100%;
-    padding: 13px;
-    border: 1px solid #cfd6df;
-    border-radius: 9px;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-}
+    input:focus,
+    textarea:focus,
+    select:focus {
+      outline: none;
+      border-color: #062b57;
+    }
 
-textarea {
-    min-height: 100px;
-    resize: vertical;
-}
+    .row {
+      display: flex;
+      gap: 12px;
+    }
 
-input:focus,
-textarea:focus,
-select:focus {
-    outline: none;
-    border-color: #062b57;
-}
+    .row > div {
+      flex: 1;
+    }
 
-.required {
-    color: #d00000;
-}
+    button {
+      width: 100%;
+      margin-top: 22px;
+      padding: 15px;
+      border: none;
+      border-radius: 9px;
+      background: #062b57;
+      color: white;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-button {
-    width: 100%;
-    margin-top: 22px;
-    padding: 15px;
-    border: none;
-    border-radius: 10px;
-    background: #062b57;
-    color: white;
-    font-size: 17px;
-    font-weight: bold;
-    cursor: pointer;
-}
+    button:hover {
+      background: #08427f;
+    }
 
-button:hover {
-    background: #08427f;
-}
+    .required {
+      color: red;
+    }
 
-.note {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: #666;
-}
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      font-size: 14px;
+    }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #666;
-    font-size: 13px;
-}
-</style>
-</
+    @media (max-width: 600px) {
+      .card {
+        margin: 15px;
+        padding: 18px;
+      }
+
+      .row {
+        flex-direction: column;
+        gap: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Super Stan (WA) Pty Ltd</h1>
+    <p>Your Freight, My Priority!</p>
+  </header>
+
+  <div class="card">
+
+    <form id="bookingForm">
+
+      <label for="goods">
+        Goods <span class="required">*</span>
+      </label>
+      <textarea
+        id="goods"
+        name="goods"
+        placeholder="Enter the goods you are sending"
+        required
+      ></textarea>
+
+      <label for="name">
+        Name <span class="required">*</span>
+      </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your full name"
+        required
+      >
+
+      <label for="phone">
+        Phone <span class="required">*</span>
+      </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Your phone number"
+        required
+      >
+
+      <label for="email">
+        Email <span class="required">*</span>
+      </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your email address"
+        required
+      >
+
+      <div class="row">
+
+        <div>
+          <label for="date">
+            Date <span class="required">*</span>
+          </label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            required
+          >
+        </div>
+
+        <div>
+          <label for="time">
+            Time <span class="required">*</span>
+          </label>
+          <input
+            type="time"
+            id="time"
+            name="time"
+            required
+          >
+        </div>
+
+      </div>
+
+      <label for="weight">
+        Weight (kg) <span class="required">*</span>
+      </label>
+      <input
+        type="number"
+        id="weight"
+        name="weight"
+        min="0"
+        step="0.1"
+        placeholder="e.g. 50"
+        required
+      >
+
+      <label for="description">
+        Description
+      </label>
+      <textarea
+        id="description"
+        name="description"
+        placeholder="Additional information"
+      ></textarea>
+
+      <button type="submit">
+        SEND BOOKING REQUEST
+      </button>
+
+    </form>
+
+  </div>
+
+  <footer>
+    Super Stan (WA) Pty Ltd
+  </footer>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (!this.checkValidity()) {
+        this.reportValidity();
+        return;
+      }
+
+      window.location.href = "confirmation.html";
+    });
+  </script>
+
+</body>
+</html>
