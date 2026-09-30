@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Super Stan (WA) Pty Ltd</title>
+<style>
+body{font-family:Arial;margin:0;background:#f4f7fb;color:#152238}
+header{background:#062b57;color:#fff;padding:22px;text-align:center}
+header b{color:#ffc400}.card{max-width:680px;margin:18px auto;padding:20px;background:#fff;border-radius:16px;box-shadow:0 4px 18px #0001}
+label{display:block;font-weight:bold;margin:12px 0 6px}
+input,select,textarea{width:100%;padding:12px;box-sizing:border-box;border:1px solid #d2dbe7;border-radius:9px;font-size:15px}
+button{width:100%;padding:14px;margin-top:16px;border:0;border-radius:10px;background:#ffc400;font-weight:900;font-size:16px}
+</style>
+</head>
+<body>
+<header><h1>🚚 Super Stan <b>(WA) Pty Ltd</b></h1><div>Your Freight, My Priority!</div></header>
+<section class="card">
+<h2>Book a Delivery</h2>
+<form action="https://formsubmit.co/superstan.wa@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Super Stan WA Booking Request">
+<input type="hidden" name="_next" value="https://superstan-dotcom.github.io/superstanwa/confirmation.html">
+<input type="hidden" name="_template" value="table">
+<label>Pickup address *</label><input name="pickup_address" required>
+<label>Delivery address *</label><input name="delivery_address" required>
+<label>Preferred date</label><input name="preferred_date" type="date">
+<label>Preferred time</label><input name="preferred_time" type="time">
+<label>Vehicle</label><select name="vehicle"><option>Ute</option><option>Van</option><option>Truck</option></select>
+<label>Approx. weight (kg)</label><input name="weight_kg" type="number" min="0">
+<label>Goods description *</label><textarea name="goods" rows="3" required></textarea>
+<label>Your name *</label><input name="customer_name" required>
+<label>Phone *</label><input name="phone" type="tel" required>
+<label>Your email (optional)</label><input name="customer_email" type="email">
+<button type="submit">SEND BOOKING REQUEST</button>
+</form>
+<p>📞 +61 424 851 871<br>📧 superstan.wa@gmail.com</p>
+</section>
+</body>
+</html>
