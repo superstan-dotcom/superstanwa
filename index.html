@@ -1,42 +1,121 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Super Stan (WA) Pty Ltd</title>
 
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f4f7fb;
-  color: #152238;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #152238;
 }
 
 header {
-  background: #062b57;
-  color: white;
-  padding: 22px;
-  text-align: center;
+    background: #062b57;
+    color: white;
+    padding: 24px 16px;
+    text-align: center;
 }
 
-header b {
-  color: #ffc400;
+header h1 {
+    margin: 0;
+    font-size: 26px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 680px;
+    margin: 20px auto;
+    padding: 20px;
 }
 
 .card {
-  max-width: 680px;
-  margin: 18px auto;
-  padding: 20px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #062b57;
 }
 
 label {
-  display: block;
-  font-weight: bold;
-  margin: 12px 0 6px;
+    display: block;
+    font-weight: bold;
+    margin: 14px 0 6px;
 }
 
 input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cfd6df;
+    border-radius: 9px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #062b57;
+}
+
+.required {
+    color: #d00000;
+}
+
+button {
+    width: 100%;
+    margin-top: 22px;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #062b57;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #08427f;
+}
+
+.note {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 13px;
+}
+</style>
+</
